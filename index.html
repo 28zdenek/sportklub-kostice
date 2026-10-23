@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sportklub Kostice – restaurace a bowling</title>
+<meta name="description" content="Restaurace s bowlingem ve sportovním areálu v Kosticích. Polední menu, oslavy, večírky, catering. Tel. 703 652 204.">
+<meta property="og:title" content="Sportklub Kostice – restaurace a bowling">
+<meta property="og:description" content="Polední menu, oslavy, večírky, catering. U Stadionu 642, Kostice.">
+<meta property="og:image" content="https://www.sportklubkostice.cz/img/budova.jpg">
+<meta name="theme-color" content="#F7ECE5">
+<link rel="icon" href="img/logo.png">
+<link rel="preload" href="fonts/poppins-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Poppins;font-weight:400;font-display:swap;src:url(fonts/poppins-400-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329}
+@font-face{font-family:Poppins;font-weight:400;font-display:swap;src:url(fonts/poppins-400-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:Poppins;font-weight:600;font-display:swap;src:url(fonts/poppins-600-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329}
+@font-face{font-family:Poppins;font-weight:600;font-display:swap;src:url(fonts/poppins-600-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2212}
+@font-face{font-family:Poppins;font-weight:700;font-display:swap;src:url(fonts/poppins-700-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329}
+@font-face{font-family:Poppins;font-weight:700;font-display:swap;src:url(fonts/poppins-700-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2212}
+:root{--bg:#F7ECE5;--card:#FFFAF6;--ink:#3E3532;--muted:#7A6C66;--line:#EAD9CF;--brick:#B5432B;--brick-d:#93331F;--star:#E7A325}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Poppins,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding:20px 16px 40px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+header img{width:72px;height:72px;border-radius:50%;flex:none}
+h1{margin:0;font-size:26px;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.tag{margin:2px 0 0;color:var(--muted);font-size:14.5px}
+.photo{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:18px;box-shadow:0 10px 30px -12px rgba(62,53,50,.35)}
+.services{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 20px;padding:0;list-style:none}
+.services li{font-size:13.5px;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 12px}
+.actions{display:grid;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:12px 18px;border-radius:14px;font-weight:600;font-size:17px;text-decoration:none;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-main{background:var(--brick);color:#fff}
+.btn-main:hover{background:var(--brick-d)}
+.btn-alt{background:var(--card);border:1.5px solid var(--ink);color:var(--ink)}
+.btn-alt:hover{background:#fff}
+.btn small{display:block;font-weight:400;font-size:13px;opacity:.85;line-height:1.2}
+.btn span{text-align:left}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}
+.card h2{margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rating{display:flex;align-items:center;gap:14px;text-decoration:none}
+.rating .num{font-size:40px;font-weight:700;line-height:1}
+.stars{display:flex;gap:2px;color:var(--star)}
+.stars svg{width:20px;height:20px}
+.rating .cnt{font-size:14px;color:var(--muted)}
+.rating .go{margin-left:auto;font-size:14px;font-weight:600;color:var(--brick);white-space:nowrap}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:5px 0}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:var(--brick)}
+address{font-style:normal;font-size:16px}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font-size:15px;font-weight:600}
+.links a{color:var(--brick);text-decoration:none}
+.links a:hover{text-decoration:underline}
+footer{margin-top:28px;text-align:center;font-size:13px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media (min-width:640px){.wrap{padding-top:40px}h1{font-size:30px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <img src="img/logo.png" alt="Logo Bowling – Sportklub Kostice" width="72" height="72">
+    <div>
+      <h1>Sportklub Kostice</h1>
+      <p class="tag">Restaurace a bowling ve sportovním areálu</p>
+    </div>
+  </header>
+
+  <img class="photo" src="img/budova.jpg" alt="Budova Sportklubu Kostice s prosklenou terasou" width="1190" height="760">
+
+  <ul class="services">
+    <li>Polední menu</li><li>Bowling</li><li>Oslavy</li><li>Večírky</li><li>Catering</li>
+  </ul>
+
+  <div class="actions">
+    <a class="btn btn-main" href="https://www.facebook.com/sportklubkostice" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+      <span>Jídelníček<small>aktuální menu na našem Facebooku</small></span>
+    </a>
+    <a class="btn btn-alt" href="tel:+420703652204">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      <span>Zavolat 703 652 204<small>rezervace bowlingu, oslavy, catering</small></span>
+    </a>
+  </div>
+
+  <section class="card">
+    <h2>Hodnocení na Googlu</h2>
+    <a class="rating" href="https://maps.google.com/?cid=12751002731558460637" target="_blank" rel="noopener">
+      <span class="num">4,7</span>
+      <span>
+        <span class="stars" aria-label="4,7 z 5 hvězdiček">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="half"><stop offset="70%" stop-color="currentColor"/><stop offset="70%" stop-color="#E8DAD0"/></linearGradient></defs><path fill="url(#half)" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        </span>
+        <span class="cnt">279 recenzí</span>
+      </span>
+      <span class="go">Přečíst →</span>
+    </a>
+  </section>
+
+  <section class="card">
+    <h2>Otevírací doba</h2>
+    <table class="hours">
+      <tr data-d="1 2 3 4"><td>Pondělí – čtvrtek</td><td>10:30 – 22:00</td></tr>
+      <tr data-d="5 6"><td>Pátek – sobota</td><td>10:30 – 23:00</td></tr>
+      <tr data-d="0"><td>Neděle</td><td>10:30 – 21:00</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Adresa</h2>
+    <address>Sportklub Kostice<br>U Stadionu 642<br>691 52 Kostice</address>
+    <div class="links">
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Sportklub+Kostice,+U+Stadionu+642,+691+52+Kostice" target="_blank" rel="noopener">Navigovat →</a>
+      <a href="tel:+420703652204">703 652 204</a>
+      <a href="https://www.facebook.com/sportklubkostice" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </section>
+
+  <footer>© Sportklub Kostice</footer>
+</main>
+<script>
+var d=String(new Date().getDay());document.querySelectorAll('.hours tr').forEach(function(r){if(r.dataset.d.split(' ').indexOf(d)>-1)r.className='today'});
+</script>
+</body>
+</html>
